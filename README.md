@@ -1,4 +1,4 @@
-# Elasticsearch: The Definitive Guide CN 4
+# Elasticsearch: The Definitive Guide CN
 
 英文原文：
 
