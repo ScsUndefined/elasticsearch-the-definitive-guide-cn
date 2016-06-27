@@ -1,7 +1,5 @@
 # 5.6.4 Synonyms and The Analysis Chain
 
-temp
-
 The example we showed in Formatting Synonyms, used u s a as a synonym. Why did we use that instead of U.S.A.? The reason is that the synonym token filter sees only the terms that the previous token filter or tokenizer has emitted.
 
 Imagine that we have an analyzer that consists of the standard tokenizer, with the lowercase token filter followed by a synonym token filter. The analysis process for the text U.S.A. would look like this:
