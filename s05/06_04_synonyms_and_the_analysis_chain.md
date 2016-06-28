@@ -50,7 +50,7 @@
 
 > **提示**
 > 
-> 你马上就会看到它将变得多么复杂了 ~~我好方~~。和以往一样，analyze API 仍旧是你检测是的解析器是否配置正确的好帮手，具体参阅 [Testing Analyzers](https://www.elastic.co/guide/en/elasticsearch/guide/current/analysis-intro.html#analyze-api).
+> 你马上就会看到它将变得多么复杂了 ~~我开始方了~~。和以往一样，analyze API 仍旧是你检测是的解析器是否配置正确的好帮手，具体参阅 [Testing Analyzers](https://www.elastic.co/guide/en/elasticsearch/guide/current/analysis-intro.html#analyze-api).
 
 ***
 
