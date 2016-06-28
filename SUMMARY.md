@@ -208,7 +208,7 @@
        * [5.6.1 Using Synonyms 使用同义词](s05/06_01_using_synonyms.md)
        * [5.6.2 Formatting Synonyms 同义词规则的书写格式](s05/06_02_formatting_synonyms.md)
        * [5.6.3 Expand or contract 拓展还是收缩](s05/06_03_expand_or_contract.md)
-       * [5.6.4 Synonyms and The Analysis Chain](s05/06_04_synonyms_and_the_analysis_chain.md)
+       * [5.6.4 Synonyms and The Analysis Chain 同义词与解析器链](s05/06_04_synonyms_and_the_analysis_chain.md)
        * 5.6.5 Multiword Synonyms and Phrase Queries
        * 5.6.6 Symbol Synonyms
    * 5.7 Typoes and Mispelings
