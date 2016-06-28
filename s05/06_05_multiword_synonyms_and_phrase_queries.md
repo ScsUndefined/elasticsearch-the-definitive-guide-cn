@@ -140,11 +140,11 @@ Pos 5:  (wealthy)
 
 这个方法的缺点是，因为把 `united states of america` 转换成了同义词 `usa`，你就不能使用 `united states of america` 去搜索出 `united` 或者 `states` 等词。你需要使用一个额外的字段并用另一个解析器链来达到这个目的。
 
-## Synonyms and the query_string Query
+## 同义词与 query_string 查询
 
-We have tried to avoid discussing the `query_string` query because we don’t recommend using it. In "[More-Complicated Queries](https://www.elastic.co/guide/en/elasticsearch/guide/current/search-lite.html#query-string-query)", we said that, because the `query_string` query supports a terse mini search-syntax, it could frequently lead to surprising results or even syntax errors.
+本书很少谈论到 `query_string` 查询，因为真心不推荐你用它。在“[More-Complicated Queries](https://www.elastic.co/guide/en/elasticsearch/guide/current/search-lite.html#query-string-query)”一节中有提到，由于 `query_string` 查询支持一个精简的查询语法，因此，可能这会导致它搜出一些出人意料的结果或者甚至是含有语法错误的结果。
 
-One of the gotchas of this query involves multiword synonyms. To support its search-syntax, it has to parse the query string to recognize special operators like `AND`, `OR`, `+`, `-`, `field:`, and so forth. (See the full [`query_string` syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax) for more information.)
+这种查询方式存在不少问题，而其中之一便与多词同义有关。为了支持它的查询语法，你必须把查询文本用指定的，该语法所能识别的操作符号来标示，比如 `AND`, `OR`, `+`, `-`, `field:`等。（更多相关内容参阅  [`query_string` syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax) ）
 
 As part of this parsing process, it breaks up the query string on whitespace, and passes each word that it finds to the relevant analyzer separately. This means that your synonym analyzer will never receive a multiword synonym. Instead of seeing `United States` as a single string, the analyzer will receive `United` and `States` separately.
 
