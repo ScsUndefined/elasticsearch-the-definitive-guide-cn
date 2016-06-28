@@ -146,9 +146,9 @@ Pos 5:  (wealthy)
 
 这种查询方式存在不少问题，而其中之一便与多词同义有关。为了支持它的查询语法，你必须把查询文本用指定的，该语法所能识别的操作符号来标示，比如 `AND`, `OR`, `+`, `-`, `field:`等。（更多相关内容参阅  [`query_string` syntax](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-query-string-query.html#query-string-syntax) ）
 
-As part of this parsing process, it breaks up the query string on whitespace, and passes each word that it finds to the relevant analyzer separately. This means that your synonym analyzer will never receive a multiword synonym. Instead of seeing `United States` as a single string, the analyzer will receive `United` and `States` separately.
+而在这种语法的解析过程中，解析动作会把查询文本在空格符处作切分，然后分别把每个切分出来的词传递给相关性解析器。这也即意味着你的同义词解析器永远都不可能收到类似“united states of america”这样的多个单词组成的同义词。由于不会把`United States`作为一个原子性的文本，所以同义词解析器的输入信息永远都是两个被切分开的词 `United` 和 `States`。
 
-Fortunately, the trustworthy `match` query supports no such syntax, and multiword synonyms will be passed to the analyzer in their entirety.
+所幸，`match`查询相比而言就可靠得多了，因为它不支持上述语法，所以多个字组成的同义词不会被切分开，而是会完整地交给解析器处理。
 
 ***
 
