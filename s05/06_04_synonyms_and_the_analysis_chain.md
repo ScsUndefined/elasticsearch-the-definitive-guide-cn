@@ -11,25 +11,23 @@
 同义词           标记过滤器  → (usa)
 ```
 
-如果我们设定了一个同义词规则，最终同义词会被指向 `U.S.A.`，那它就不会再匹配成功任何东西了，因为当 `my_synonym_filter` 看到标记的时候，句号已经被移除了，并且字母也已经被小写化了。
+如果我们设定了一个同义词规则，然后规则的右边是　`U.S.A.`，不管用什么关键字进行查询都出不来结果了，因为当 `my_synonym_filter` （自定义的同义词过滤器）看到标记的时候，句号已经被移除了，并且字母也已经被小写化了。
 
-If we had specified the synonym as `U.S.A.`, it would never match anything because, by the time `my_synonym_filter` sees the terms, the periods have been removed and the letters have been lowercased.
-
-This is an important point to consider. What if we want to combine synonyms with stemming, so that `jumps`, `jumped`, `jump`, `leaps`, `leaped`, and `leap` are all indexed as the single term `jump`? We could place the synonyms filter before the stemmer and list all inflections:
+这其实是一个非常需要注意的地方。如果我们想同时使用同义词特性与词根提取特性，那是否　`jumps`, `jumped`, `jump`, `leaps`, `leaped`, 和 `leap` 这些词都会被索引成一个 `jump` ？我们或许可以把同义词过滤器防止到词根提取过滤器前面，然后把所有同义词以及变体都列举出来：
 
 "jumps,jumped,leap,leaps,leaped => jump"
 
-But the more concise way would be to place the synonyms filter after the stemmer, and to list just the root words that would be emitted by the stemmer:
+但更简洁的做法是把同义词过滤器放到词根化过滤器的后面，然后只要把词根形式的同义词列举出来：
 
 "leap => jump"
 
-## Case-Sensitive Synonyms
+## 大小写敏感的同义词
 
-Normally, synonym filters are placed after the `lowercase` token filter and so all synonyms are written in lowercase, but sometimes that can lead to odd conflations. For instance, a `CAT` scan and a `cat` are quite different, as are `PET` (positron emission tomography) and a `pet`. For that matter, the surname `Little` is distinct from the adjective `little` (although if a sentence starts with the adjective, it will be uppercased anyway).
+通常情况下，`同义词` 标记过滤器都会放置在 `小写化` 标记过滤器的后面，也因此同义词规则里的所有词都是以小写格式来指定的，但有时候这个做法也会一些奇怪的合并操作。比如，`CAT`扫描 ~~也就是医院里的CT扫描~~ 和 `cat` 意思是不同的，同样的，`PET`（正电子发射型断层显像技术）和 `pet` 意思也不一样。还有，用于表示姓名的 `Little` 和形容词性的 `little` 意思（尽管当一个句子以它开头时，首字母会被大写，然后看上去就和 `Little` 一样了）也又不同。
 
-If you need use case to distinguish between word senses, you will need to place your synonym filter before the `lowercase` filter. Of course, that means that your synonym rules would need to list all of the case variations that you want to match (for example, `Little,LITTLE,little`).
+如果你需要借助大小写来甄别字词的意思，那你需要把你的同义词过滤器放置在在 `小写化` 过滤器之前了。当然这也就以为着你的同义词规则需要精准地列出你想要匹配的词的每种变体（比如，`Little,LITTLE,little`）。
 
-Instead of that, you could have two synonym filters: one to catch the case-sensitive synonyms and one for all the case-insensitive synonyms. For instance, the case-sensitive rules could look like this:
+除了上述做法，你也可以有两个同义词过滤器，一个匹配大小写敏感的同义词一个匹配大小写不敏感的同义词。举例来说，大小写敏感的同义词规则大概就像下面这样：
 
 ```
 "CAT,CAT scan           => cat_scan"
@@ -38,7 +36,7 @@ Instead of that, you could have two synonym filters: one to catch the case-sensi
 "Johnny Small,J Small   => johnny_small"
 ```
 
-And the case-insensitive rules could look like this:
+然后大小不敏感的同义词规则大概就像：
 
 ```
 "cat                    => cat,pet"
@@ -48,11 +46,11 @@ And the case-insensitive rules could look like this:
 "little,small"
 ```
 
-The case-sensitive rules would `CAT scan` but would match only the `CAT` in `CAT scan`. For this reason, we have the odd-looking rule `cat_scan scan` in the case-insensitive list to catch bad replacements.
+大小写敏感的同义词规则不仅会处理 `CAT scan`，而且有时候也可能会匹配到 `CAT scan` 中的 `CAT` 从而导致 `CAT scan` 被转化成了同义词 `cat_scan scan` ~~这大概取决于分词是否准确吧~~。因此在大小写不敏感的同义词规则里，我们有一条看上去怪怪的同义词规则 `cat_scan scan`，就是用来修正大小写敏感的同义词过滤器产生的坏的替换结果的。
 
-> **Tip**
+> **提示**
 > 
-> You can see how quickly it can get complicated. As always, the analyze API is your friend—use it to check that your analyzers are configured correctly. See [Testing Analyzers](https://www.elastic.co/guide/en/elasticsearch/guide/current/analysis-intro.html#analyze-api).
+> 你马上就会看到它将变得多么复杂了 ~~我好方~~。和以往一样，analyze API 仍旧是你检测是的解析器是否配置正确的好帮手，具体参阅 [Testing Analyzers](https://www.elastic.co/guide/en/elasticsearch/guide/current/analysis-intro.html#analyze-api).
 
 ***
 
