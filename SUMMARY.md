@@ -210,7 +210,7 @@
        * [5.6.3 Expand or contract 拓展还是收缩](s05/06_03_expand_or_contract.md)
        * [5.6.4 Synonyms and The Analysis Chain 同义词与解析器链](s05/06_04_synonyms_and_the_analysis_chain.md)
        * [5.6.5 Multiword Synonyms and Phrase Queries 多词同义与短语查询](s05/06_05_multiword_synonyms_and_phrase_queries.md)
-       * [5.6.6 Symbol Synonyms](s05/06_06_symbol_synonyms.md)
+       * [5.6.6 Symbol Synonyms 符号同义词](s05/06_06_symbol_synonyms.md)
    * 5.7 Typoes and Mispelings
        * 5.7.1 Fuzziness
        * 5.7.2 Fuzzy Query
