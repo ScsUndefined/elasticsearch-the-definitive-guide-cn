@@ -138,8 +138,7 @@ Pos 5:  (wealthy)
 "usa is wealthy"
 ```
 
-这个方法的缺点是，因为把 
-The downside of this approach is that, by reducing `united states of america` down to the single term `usa`, you can’t use the same field to find just the word `united` or `states`. You would need to use a separate field with a different analysis chain for that purpose.
+这个方法的缺点是，因为把 `united states of america` 转换成了同义词 `usa`，你就不能使用 `united states of america` 去搜索出 `united` 或者 `states` 等词。你需要使用一个额外的字段并用另一个解析器链来达到这个目的。
 
 ## Synonyms and the query_string Query
 
