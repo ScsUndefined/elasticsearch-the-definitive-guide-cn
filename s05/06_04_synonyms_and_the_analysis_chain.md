@@ -1,4 +1,4 @@
-# 5.6.4 Synonyms and The Analysis Chain 解析器链
+# 5.6.4 Synonyms and The Analysis Chain 同义词与解析器链
 
 在 [Formatting Synonyms](https://www.elastic.co/guide/en/elasticsearch/guide/current/synonym-formats.html) 一章中，我们使用 `u s a`　来举例阐述一些同义词相关的知识。那为什么我们没有使用 `U.S.A.`呢？这其实是有原因的，那就是因为 `同义词`　标记过滤器只能接收到在它前面的标记过滤器或者分词器的输出结果，而看不到最原始的输入文本。
 
