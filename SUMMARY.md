@@ -213,7 +213,7 @@
        * [5.6.6 Symbol Synonyms 符号同义词](s05/06_06_symbol_synonyms.md)
    * [5.7 Typoes and Mispelings 拼写错误](s05/07_typoes_and_mispelings.md)
        * [5.7.1 Fuzziness 怎么判断是否存在拼写错误](s05/07_01_fuzziness.md)
-       * [5.7.2 Fuzzy Query](s05/07_02_fuzzy_query.md)
+       * [5.7.2 Fuzzy Query 模糊查询](s05/07_02_fuzzy_query.md)
        * 5.7.3 Fuzzy match Query
        * 5.7.4 Scoring Fuzziness
        * 5.7.5 Phonetic Matching
