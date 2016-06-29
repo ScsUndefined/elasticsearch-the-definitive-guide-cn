@@ -1,4 +1,38 @@
-# 5.7.1 Fuzziness
+# 5.7.1 Fuzziness 模糊性
+
+*模糊匹配* 会把两个“貌似”相似的词当做同一个词来对待，但首先我们得明确这个 *模糊性* 该怎么鉴定。
+
+俄罗斯科学家弗拉基米尔·莱文斯坦在1965年提出了 [莱文斯坦距离](http://en.wikipedia.org/wiki/Levenshtein_distance) 这个概念，用来表示一个词转变到另一个词的时候需要修改多少个字符。他最初把修改操作归结为三种：
+
+* *替换* : \_f\_ox → \_b\_ox
+* *新增* : sic → sic\_k\_
+* *删除* : b\_l\_ack → back
+
+而 [Frederick Damerau](http://en.wikipedia.org/wiki/Frederick_J._Damerau) 又在此基础上新加了一种修改操作类型：
+
+* *交换* : \_st\_ar → \_ts\_ar
+
+基于这个理论， 如果要把 `bieber` 修改成 `beaver` 就需要执行下面这几步 :
+
+1. 把 `b` 替换为 `v` : bie_b_er → bie_v_er
+2. 把 `i` 替换为 `a` : b_i_ever → b_a_ever
+3. 调换 `a` 和 `e` 的位置 : b_ae_ver → b_ea_ver
+
+即 3 个 莱文斯坦编辑距离。
+
+很明显，`bieber` 和 `beaver` 隔太远了 — 所以它们很难被看作是由于拼写错误而产生的一对其实意思是相同的词。Damerau 发现 80% 的拼写错误对应的 莱文斯坦编辑距离 都只有 1 。也即，80% 的拼写错误都只需要简单的 *一步* 操作就可以把它还原成它正确的样子。
+
+Elasticsearch 默认 2 个编辑距离以内的词可能是相同的词，你也可以通过 `fuzziness` 参数来修改它。
+
+当然，默认的做法是否靠谱还得根据实际被处理的词的长短来看，如果词的长度太短，比如 `hat`，经过两次修改之后就可以变成 `mad` 。所以很明显， 2 个编辑距离对于 3 个字母的单词而言就有点过了。所以你也可以把 `fuzziness` 的值设置成 `AUTO`，这会最终导致：
+
+* `0` 对于 1~2 个字母组成的单词，不会考虑是否存在拼写错误的情况
+* `1` 对于 3~5 个字母组成的单词，会考虑距离它们 1 个莱文斯坦编辑距离的其他字母组合
+* `2` 而对于 5 个以上字母组成的单词，会考虑距离它们最多 2 个莱文斯坦编辑距离的其他字母组合
+
+当然，实际应用过程中如果你发现 `2` 个莱文斯坦距离依然有点过，并且导致搜索结果的质量变低。那你就可以把 `fuzziness` 设为 `1`。
+
+***
 
 *Fuzzy matching* treats two words that are “fuzzily” similar as if they were the same word. First, we need to define what we mean by *fuzziness*.
 
