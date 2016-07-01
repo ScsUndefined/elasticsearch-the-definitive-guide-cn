@@ -149,7 +149,7 @@
        * 4.5.4 Query-Time Search-as-You-Type
        * 4.5.5 Index-Time Optimizations
        * 4.5.6 Ngrams for Partial Matching
-       * 4.5.7 Index-Time Search-as-You-Type
+       * [4.5.7 Index-Time Search-as-You-Type](s04/05_07_index-time_search-as-you-type.md)
        * 4.5.8 Ngrams for Compound Words
    * 4.6 Controlling Relevance
        * 4.6.1 Theory Behind Relevance Scoring
