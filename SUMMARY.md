@@ -229,7 +229,7 @@
    * Significant Terms
    * Doc Values and Fielddata
    * Closing Thoughts
-* 7 Geolocation
+* [7 Geolocation](s07/00_geolocation.md)
    * Geo Points
    * Geohashes
    * Geo Aggregations
