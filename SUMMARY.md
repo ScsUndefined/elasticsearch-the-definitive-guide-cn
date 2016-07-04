@@ -239,7 +239,7 @@
    * Nested Objects
    * Parent-Child Relationship
    * Designing for Scale
-* 9 Administration, Monitoring, and Deployment
+* [9 Administration, Monitoring, and Deployment](s09/00_administration,_monitoring,_and_deployment.md)
    * Monitoring
    * Production Deployment
    * Post-Deployment
