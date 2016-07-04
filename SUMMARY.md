@@ -234,7 +234,7 @@
    * Geohashes
    * Geo Aggregations
    * Geo Shapes
-* 8 Modeling Your Data
+* [8 Modeling Your Data](s08/00_modeling_your_data.md)
    * Handling Relationships
    * Nested Objects
    * Parent-Child Relationship
