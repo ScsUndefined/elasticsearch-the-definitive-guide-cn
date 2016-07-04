@@ -217,7 +217,7 @@
        * 5.7.3 Fuzzy match Query
        * 5.7.4 Scoring Fuzziness
        * 5.7.5 Phonetic Matching
-* 6 Aggregations
+* [6 Aggregations](s06/00_aggregations.md)
    * High-Level Concepts
    * Aggregation Test-Drive
    * Building Bar Charts
