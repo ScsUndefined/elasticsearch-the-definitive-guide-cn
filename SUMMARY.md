@@ -105,7 +105,7 @@
        * 3.11.3 Near Real-Time Search
        * 3.11.4 Making Changes Persistent
        * 3.11.5 Segment Merging
-* 4 Search in Depth
+* [4 Search in Depth](s04/00_search_in_depth.md)
    * 4.1 Structured Search
        * 4.1.1 Finding Exact Values
        * 4.1.2 Combining Filters
