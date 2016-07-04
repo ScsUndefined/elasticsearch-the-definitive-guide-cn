@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [1 Foreword](s01/00_foreword.md)
-* 2 Preface
+* [2 Preface](s02/00_preface.md)
    * 2.1 Who Should Read This Book
    * 2.2 Why We Wrote This Book
    * 2.3 Elasticsearch Version
