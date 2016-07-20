@@ -1,4 +1,4 @@
-# 4.3.1 Multiple Query Strings
+# 4.3.1 Multiple Query Strings 多个查询关键词
 
 The simplest multifield query to deal with is the one where we can *map search terms to specific fields*. If we know that *War and Peace* is the title, and *Leo Tolstoy* is the author, it is easy to write each of these conditions as a `match` clause and to combine them with a `bool` query:
 
