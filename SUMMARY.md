@@ -124,7 +124,7 @@
        * 4.2.8 Relevance Is Broken!
    * [4.3 Multifield Search](s04/03_multifield_search.md)
        * [4.3.1 Multiple Query Strings](s04/03_01_multiple_query_strings.md)
-       * 4.3.2 Single Query String
+       * [4.3.2 Single Query String](s04/03_02_single_query_string.md)
        * 4.3.3 Best Fields
        * 4.3.4 Tuning Best Fields Queries
        * 4.3.5 multi_match Query
