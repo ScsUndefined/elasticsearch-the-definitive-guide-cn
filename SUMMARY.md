@@ -122,7 +122,7 @@
        * 4.2.6 Boosting Query Clauses
        * 4.2.7 Controlling Analysis
        * 4.2.8 Relevance Is Broken!
-   * 4.3 Multifield Search
+   * [4.3 Multifield Search](s04/03_multifield_search.md)
        * 4.3.1 Multiple Query Strings
        * 4.3.2 Single Query String
        * 4.3.3 Best Fields
