@@ -127,7 +127,7 @@
        * [4.3.2 Single Query String 单个查询关键词](s04/03_02_single_query_string.md)
        * [4.3.3 Best Fields 最优字段查询](s04/03_03_best_fields.md)
        * [4.3.4 Tuning Best Fields Queries 对最优字段查询进行微调](s04/03_04_tuning_best_fields_queries.md)
-       * 4.3.5 multi_match Query
+       * [4.3.5 multi_match Query](s04/03_05_multimatch_query.md)
        * 4.3.6 Most Fields
        * 4.3.7 Cross-fields Entity Search
        * 4.3.8 Field-Centric Queries
