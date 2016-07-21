@@ -1,4 +1,4 @@
-# 4.3.4 Tuning Best Fields Queries
+# 4.3.4 Tuning Best Fields Queries 对最优字段查询进行微调
 
 假如用户输入的是“quick pets”那么结果为如何呢？第一篇博文的标题和第二篇博文的正文都有单词 quick，另外第二篇博文的标题含有单词“pet”，而这两篇博文都没有哪个字段是同时含有 quick 和 pet 这两个词的。
 
