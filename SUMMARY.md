@@ -126,7 +126,7 @@
        * [4.3.1 Multiple Query Strings](s04/03_01_multiple_query_strings.md)
        * [4.3.2 Single Query String](s04/03_02_single_query_string.md)
        * [4.3.3 Best Fields](s04/03_03_best_fields.md)
-       * [4.3.4 Tuning Best Fields Queries](s04/03_04_tuning_best_fields_queries.md)
+       * [4.3.4 Tuning Best Fields Queries ](s04/03_04_tuning_best_fields_queries.md)
        * 4.3.5 multi_match Query
        * 4.3.6 Most Fields
        * 4.3.7 Cross-fields Entity Search
