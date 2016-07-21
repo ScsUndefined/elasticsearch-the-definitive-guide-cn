@@ -10,35 +10,29 @@
 
 当你接收到用户输入的一个查询关键词，然后把这个关键词对多个字段同时进行查询的时候，你经常会遇到下面三种情况：
 
-* Best fields 最优字段
+* Best fields 以匹配度最高的字段为标杆
 
   当我们查询表示一个概念的词的时候，比如“brown fox”，这两个单词组合出现的时候要比它们单独出现的时候更符合查询需求。另外当不同的字段，比如标题和正文，里都被查出有相关的信息，这两个字段就会存在竞争。而在相同的字段中，文档应该尽可能地有更多的词，相关度评分来自于最佳匹配的字段。
   
-  When searching for words that represent a concept, such as “brown fox,” the words mean more together than they do individually. Fields like the title and body, while related, can be considered to be in competition with each other. Documents should have as many words as possible in the same field, and the score should come from the best-matching field.
-
-* Most fields 越多字段越好
+* Most fields 命中的字段越多越好
 
   一个常用的用来多相似度进行微调的技术手段是将相同的信息以不同的解析链进行索引。
   
-  主字段可能有各个分词的词根形式，同义词，去音标形式。它
+  主字段可能有各个分词的词根形式，同义词，去音标形式。这么做是为了经可能得与查询关键词相匹配。
   
-  The main field may contain words in their stemmed form, synonyms, and words stripped of their diacritics, or accents. It is used to match as many documents as possible.
+  而相同的文本除了被索引成主字段，还会被索引成其他字段，以提供更精确地匹配。比如相同的文本可能被重新索引成了字段甲，并且保留了没有提取词根之前的版本。然后又被索引成了字段乙，保留了音标的信息。还被索引成了字段丙，保留了能够体现出词与词之间的距离信息的 shingle（这段话或者可以理解成是保留了各个词之间的前后顺序信息）。
 
-  The same text could then be indexed in other fields to provide more-precise matching. One field may contain the unstemmed version, another the original word with accents, and a third might use shingles to provide information about word proximity.
+  这三个副字段都用来提升匹配的文档的相关度评分。越多的字段命中则相关度评分越高。
 
-  These other fields act as signals to increase the relevance score of each matching document. The more fields that match, the better.
+* Cross fields 跨字段
 
-* Cross fields
-
-  For some entities, the identifying information is spread across multiple fields, each of which contains just a part of the whole:
+  在有些实体数据模型中，一些标识信息是存储在多个字段中的，每个字段只包含了整个标识信息的一部分：
   
-  * Person: first_name and last_name
-  * Book: title, author, and description
-  * Address: street, city, country, and postcode
+  * 人：姓氏和名称
+  * 书籍：标题，作者和描述
+  * 地址：街道名，城市名，乡镇名和邮政编号
   
-  In this case, we want to find as many words as possible in any of the listed fields. We need to search across multiple fields as if they were one big field.
-
-All of these are multiword, multifield queries, but each requires a different strategy. We will examine each strategy in turn in the rest of this chapter.
+上述三种情形都是多词多字段查询，但是每种场景都应该采取各自不同的搜索策略。本书的后续章节将会依次介绍针对这些场景的合适的查询策略。
 
 ***
 
