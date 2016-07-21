@@ -122,11 +122,11 @@
        * 4.2.6 Boosting Query Clauses
        * 4.2.7 Controlling Analysis
        * 4.2.8 Relevance Is Broken!
-   * [4.3 Multifield Search](s04/03_multifield_search.md)
-       * [4.3.1 Multiple Query Strings](s04/03_01_multiple_query_strings.md)
-       * [4.3.2 Single Query String](s04/03_02_single_query_string.md)
-       * [4.3.3 Best Fields](s04/03_03_best_fields.md)
-       * [4.3.4 Tuning Best Fields Queries ](s04/03_04_tuning_best_fields_queries.md)
+   * [4.3 Multifield Search 跨字段搜索](s04/03_multifield_search.md)
+       * [4.3.1 Multiple Query Strings 多个查询关键词](s04/03_01_multiple_query_strings.md)
+       * [4.3.2 Single Query String 单个查询关键词](s04/03_02_single_query_string.md)
+       * [4.3.3 Best Fields 最优字段查询](s04/03_03_best_fields.md)
+       * [4.3.4 Tuning Best Fields Queries 对最优字段查询进行微调](s04/03_04_tuning_best_fields_queries.md)
        * 4.3.5 multi_match Query
        * 4.3.6 Most Fields
        * 4.3.7 Cross-fields Entity Search
