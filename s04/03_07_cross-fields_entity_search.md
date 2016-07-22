@@ -26,7 +26,6 @@
 
 # 一个拍着屁股想出来的办法
 
-Really, we want to query each field in turn and add up the scores of every field that matches, which sounds like a job for the bool query:
 
 既然我们想要在多个字段里搜索同一个关键词，我们直接想到的做法或许是像下面这样的，在一个bool查询里嵌套多个 should 子查询，每个should子查询都这个关键词对不同字段的 match 查询：
 
