@@ -130,7 +130,7 @@
        * [4.3.5 multi_match Query multi_match查询](s04/03_05_multimatch_query.md)
        * [4.3.6 Most Fields 最多字段查询](s04/03_06_most_fields.md)
        * [4.3.7 Cross-fields Entity Search 对跨字段型实体进行搜索](s04/03_07_cross-fields_entity_search.md)
-       * [4.3.8 Field-Centric Queries](s04/03_08_field-centric_queries.md)
+       * [4.3.8 Field-Centric Queries 围绕字段来进行查询](s04/03_08_field-centric_queries.md)
        * 4.3.9 Custom \_all Fields
        * 4.3.10 cross-fields Queries
        * 4.3.11 Exact-Value Fields
