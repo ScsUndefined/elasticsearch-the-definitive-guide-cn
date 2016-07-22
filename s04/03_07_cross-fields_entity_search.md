@@ -64,13 +64,11 @@
 
 使用 most_fields 方式来应对这一场景有着一些难以察觉的潜在风险点：
 
-  * most_fields 查询方式是将查询关键词分词，然后把从关键词中细分出来的各个词元去对每个字段进行查询，然后如果某个文档匹配中的字段越多则该文档相关度越高，而不会去判断关键词的词元命中率
-   
-  * It is designed to find the most fields matching any words, rather than to find the most matching words across all fields.
-  
-  * It can’t use the operator or minimum_should_match parameters to reduce the long tail of less-relevant results.
+  * most_fields 查询在判断一个字段是否与查询关键词匹配的时候，判断的依据是字段是否含有查询关键词分完词之后的任意一个词元，然后再根据匹配的字段数来判断一个文档的相关度，而不会去判断文档的这个字段是否尽可能得匹配整个关键词分出来的所有词元。
+
+  * 它没法使用 minimum_should_match 参数来减少那些匹配度极低的长尾搜索结果
  
-  * Term frequencies are different in each field and could interfere with each other to produce badly ordered results.
+  * 每个字段的词元匹配度都是不同的，而 most_fields 查询不会在意这些细节，所以可能导致查询结果的排序不符合用户的查询意图。~~这和第一条有点意思相近~~
 
 ***
 
