@@ -170,8 +170,6 @@ GET /my_index/_search
 
 我们使用匹配范围更广泛的 title 字段来尽可能地增加匹配的结果——以增加查全率——然后我们使用 title.std 字段来作为一个新的维度以让更相关的结果优先显示出来。
 
-The contribution of each field to the final score can be controlled by specifying custom boost values. For instance, we could boost the title field to make it the most important field, thus reducing the effect of any other signal fields:
-
 每个字段的得分对最终的相关度评分造成的影响可以通过 boost 参数来控制，举个栗子，我们可以认为 titile 字段是最重要的字段，并给其增加权重，相对得这也就造成了其他字段的权重下降：
 
 ```bash
