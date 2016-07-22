@@ -20,15 +20,15 @@
 }
 ```
 
-这看上去有点像我们在 Multiple Query Strings 章节中讨论的，但其实两者之间区别很大。
+这看上去有点像我们在 Multiple Query Strings 章节中讨论的，但其实两者之间区别很大。在 Multiple Query Strings 中，我们对每个查询的字段都指定了各自的搜索关键词，而在此我们需要使用相同的关键字来搜索每个字段。
 
-This sounds a lot like the example we described in Multiple Query Strings, but there is a big difference between these two scenarios. In Multiple Query Strings, we used a separate query string for each field. In this scenario, we want to search across multiple fields with a single query string.
+我们的用户可能搜索一个叫 “Peter Smith” 的人或者一个叫 “Poland Street W1V.” 的地址。这些关键字对应的数据都被拆分存储在不同的字段里，所以采用 dis_max 或者 best_fields 查询来应对这一场景明显都不合适。~~我怎么觉得 best_fields 其实貌似也行。。。~~
 
-Our user might search for the person “Peter Smith” or for the address “Poland Street W1V.” Each of those words appears in a different field, so using a dis_max / best_fields query to find the single best-matching field is clearly the wrong approach.
-
-# A Naive Approach
+# 一个拍着屁股想出来的办法
 
 Really, we want to query each field in turn and add up the scores of every field that matches, which sounds like a job for the bool query:
+
+既然我们想要在多个字段里搜索同一个关键词，我们直接想到的做法或许是像下面这样的，在一个bool查询里嵌套多个 should 子查询，每个should子查询都这个关键词对不同字段的 match 查询：
 
 ```bash
 {
@@ -45,7 +45,7 @@ Really, we want to query each field in turn and add up the scores of every field
 }
 ```
 
-Repeating the query string for every field soon becomes tedious. We can use the multi_match query instead, and set the type to most_fields to tell it to combine the scores of all matching fields:
+当然这么编码看上去有点蠢，你可以用 most_fields 类型的 multi_match 来简写上面这个 bool 查询：~~所以我说 most_fields 好像也行嘛~~
 
 ```bash
 {
@@ -59,10 +59,14 @@ Repeating the query string for every field soon becomes tedious. We can use the 
 }
 ```
 
-# Problems with the most_fields Approach
+# 使用 most_fields 的弊端
 
-The most_fields approach to entity search has some problems that are not immediately obvious:
+~~瞬间被打脸~~
 
+使用 most_fields 方式来应对这一场景有着一些难以察觉的潜在风险点：
+
+  * most_fields 查询方式是将查询关键词分词，然后把从关键词中细分出来的各个词元去对每个字段进行查询，然后如果某个文档匹配中的字段越多则该文档相关度越高，而不会去判断关键词的词元命中率
+   
   * It is designed to find the most fields matching any words, rather than to find the most matching words across all fields.
   
   * It can’t use the operator or minimum_should_match parameters to reduce the long tail of less-relevant results.
