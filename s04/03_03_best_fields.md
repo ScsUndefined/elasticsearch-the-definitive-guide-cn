@@ -75,7 +75,7 @@ PUT /my_index/my_type/2
 
 所以，不如我们不要去结合每个字段的匹配程度来计算出最终的相关度评分，而是直接采用最优的字段的相关度作为整个查询的匹配程度的衡量标准，而忽视掉次优字段的匹配结果。这中查询策略将会导致同时含有 brown 和 fox 这两个词的字段战胜仅包含 brown 或者 fox 的字段。
 
-## dis_max Query
+## dis_max 查询
 
 这个时候我们可以使用 dis_max 查询来替代 bool 查询，这种查询方式全称是 Disjunction Max 查询。Disjunction 表示或的关系（而 conjunction 表示与），所以 Disjunction Max 查询的作用就是，只要某个文档匹配 dix_max 查询中任意一条子查询，那么这个文档就会被认为是匹配整个 dix_max 查询的，就会被返回。而最终的相关度评分则会以匹配度最高的子查询的得分为准来返回：
 
