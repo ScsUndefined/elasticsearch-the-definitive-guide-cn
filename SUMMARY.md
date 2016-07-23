@@ -113,7 +113,7 @@
        * 4.1.4 Ranges
        * 4.1.5 Dealing with Null Values
        * 4.1.6 All About Caching
-   * 4.2 Full-Text Search
+   * [4.2 Full-Text Search](s04/04_02_full-text_search.md)
        * 4.2.1 Term-Based Versus Full-Text
        * 4.2.2 The match Query
        * 4.2.3 Multiword Queries
