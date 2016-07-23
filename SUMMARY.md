@@ -1,7 +1,7 @@
 # Summary
 
-* [Introduction](README.md)
-* [1 Foreword](s01/00_foreword.md)
+* [Introduction 本书简介](README.md)
+* [1 Foreword 前言](s01/00_foreword.md) 
 * [2 Preface](s02/00_preface.md)
    * 2.1 Who Should Read This Book
    * 2.2 Why We Wrote This Book
