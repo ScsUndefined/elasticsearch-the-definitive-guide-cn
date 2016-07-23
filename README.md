@@ -38,8 +38,8 @@ Github:
 | recall | 查全 |
 | shard | 分片 |
 | stopwords | 无用词 |
-| token | 标记 |
-| token filter | 标记过滤器 |
+| token | 词元 |
+| token filter | 词元过滤器 |
 | tokenize | 分词 |
 | tokenizer | 分词器 |
 | type | 类型 |
