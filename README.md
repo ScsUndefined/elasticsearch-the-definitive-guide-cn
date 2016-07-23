@@ -1,18 +1,25 @@
 # Elasticsearch: The Definitive Guide CN
 
-英文原文：
+本书为 Elastic 的官方书籍，原名为《Elasticsearch: The Definitive Guide》，翻译成中文即 《Elasticsearch: 权威指南》
+
+官方原文链接地址：
 
 [https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html](https://www.elastic.co/guide/en/elasticsearch/guide/current/index.html)
 
-Gitbook:
+官方原文的 Github 地址：
+
+[https://github.com/elastic/elasticsearch-definitive-guide](https://github.com/elastic/elasticsearch-definitive-guide)
+
+本书的 Gitbook 地址:
 
 [https://www.gitbook.com/book/scsundefined/elasticsearch-the-definitive-guide/details](https://www.gitbook.com/book/scsundefined/elasticsearch-the-definitive-guide/details)
 
-Github:
+本书的 Github 地址:
+
+[https://github.com/ScsUndefined/elasticsearch-the-definitive-guide-cn](https://github.com/ScsUndefined/elasticsearch-the-definitive-guide-cn)
 
 
-
-当前翻译版本基于英文 2.x 版本
+当前翻译版本基于官方文档的 2.x 版本
 
 > **提醒**
 >
@@ -24,7 +31,7 @@ Github:
 
 ***
 
-关键词 (sorted by a-z) :
+关键词 (以英文字母 a-z 排序) :
 
 | en | cn |
 | -- | -- |
