@@ -133,7 +133,7 @@
        * [4.3.8 Field-Centric Queries 围绕字段来进行查询](s04/03_08_field-centric_queries.md)
        * [4.3.9 Custom \_all Fields 定制你自己的 \_all 字段](s04/03_09_custom_allfields.md)
        * [4.3.10 cross-fields Queries cross-fields查询](s04/03_10_cross-fields_queries.md)
-       * 4.3.11 Exact-Value Fields
+       * [4.3.11 Exact-Value Fields](s04/03_11_exact-value_fields.md)
    * 4.4 Proximity Matching
        * 4.4.1 Phrase Matching
        * 4.4.2 Mixing It Up
