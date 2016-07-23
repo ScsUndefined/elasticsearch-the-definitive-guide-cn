@@ -84,11 +84,15 @@ GET /_validate/query?explain
 ```
 >
 > 当你使用 minimum_should_match 和 operator 时，理清这一点就更显得尤为重要了
+>
+> ~~不是很理解，有空得试验一下~~
 
-# Per-Field Boosting
-One of the advantages of using the cross_fields query over [custom _all fields](https://www.elastic.co/guide/en/elasticsearch/guide/current/custom-all.html) is that you can boost individual fields at query time.
 
-For fields of equal value like first_name and last_name, this generally isn’t required, but if you were searching for books using the title and description fields, you might want to give more weight to the title field. This can be done as described before with the caret (^) syntax:
+# 分开对字段进行权重管控
+
+使用 cross_fields 类型的 multi_match 查询相比与定制自己的 \_all 字段来说，有一个优势，那就是你可以在查询期间独立地对各个字段进行权重的控制，以改变结果的相关度。
+
+像你如果在姓氏和名字这两个字段来搜人名的话，或许不需要单独对姓氏或者名字字段进行权重的改变，但如果你是在书名字段和书籍简介字段来搜索一本书的时候就不一样了，明显你应该对书名字段进行加权，这时候你就可以用之前提到过的 `^` 符号来达到这一目的：
 
 ```bash
 GET /books/_search
@@ -103,9 +107,9 @@ GET /books/_search
 }
 ```
 
-① The title field has a boost of 2, while the description field has the default boost of 1.
+① title 字段的 boost 值被设置成了2 ，而 description 的值默认是 1
 
-The advantage of being able to boost individual fields should be weighed against the cost of querying multiple fields instead of querying a single custom _all field. Use whichever of the two solutions that delivers the most bang for your buck.
+虽然 cross_fields 型的 multi_match 有着这样一种优势，但也并代表定制 \_all 字段就一无是处了，跨多个字段查询和单独只查一个字段相比代价或者说开销明显是不同的，所以究竟使用哪种方案你要具体情况具体对待。
 
 ***
 
