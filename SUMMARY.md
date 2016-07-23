@@ -132,7 +132,7 @@
        * [4.3.7 Cross-fields Entity Search 对跨字段型实体进行搜索](s04/03_07_cross-fields_entity_search.md)
        * [4.3.8 Field-Centric Queries 围绕字段来进行查询](s04/03_08_field-centric_queries.md)
        * [4.3.9 Custom \_all Fields 定制你自己的 \_all 字段](s04/03_09_custom_allfields.md)
-       * [4.3.10 cross-fields Queries](s04/03_10_cross-fields_queries.md)
+       * [4.3.10 cross-fields Queries cross-fields查询](s04/03_10_cross-fields_queries.md)
        * 4.3.11 Exact-Value Fields
    * 4.4 Proximity Matching
        * 4.4.1 Phrase Matching
