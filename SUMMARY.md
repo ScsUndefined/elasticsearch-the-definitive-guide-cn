@@ -12,7 +12,7 @@
    * 2.7 Conventions Used in This Book
    * 2.8 Using Code Examples
    * 2.9 Acknowledgments
-* [3 Getting Started](s03/00_getting_started.md)
+* [3 Getting Started 基础入门](s03/00_getting_started.md)
    * 3.1 You Know, for Search…
        * 3.1.1 Installing and Running Elasticsearch
        * 3.1.2 Talking to Elasticsearch
