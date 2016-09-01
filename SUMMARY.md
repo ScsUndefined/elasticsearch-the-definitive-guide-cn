@@ -13,7 +13,7 @@
    * 2.8 Using Code Examples
    * 2.9 Acknowledgments
 * [3 Getting Started 基础入门](s03/00_getting_started.md)
-   * [3.1 You Know, for Search…](s03/01_00_you_know,_for_search.md)
+   * [3.1 You Know, for Search… 关于搜索...](s03/01_00_you_know,_for_search.md) 
        * 3.1.1 Installing and Running Elasticsearch
        * 3.1.2 Talking to Elasticsearch
        * 3.1.3 Document Oriented
