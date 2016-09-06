@@ -152,7 +152,7 @@
        * [4.5.7 Index-Time Search-as-You-Type](s04/05_07_index-time_search-as-you-type.md)
        * 4.5.8 Ngrams for Compound Words
    * [4.6 Controlling Relevance 手动排序](s04/06_controlling_relevance.md)
-       * 4.6.1 Theory Behind Relevance Scoring
+       * [4.6.1 Theory Behind Relevance Scoring](s04/06_01_theory_behind_relevance_scoring.md)
        * 4.6.2 Lucene’s Practical Scoring Function
        * 4.6.3 Query-Time Boosting
        * 4.6.4 Manipulating Relevance with Query Structure
