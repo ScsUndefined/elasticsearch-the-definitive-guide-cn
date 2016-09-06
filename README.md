@@ -1,5 +1,10 @@
 # Elasticsearch: The Definitive Guide CN
 
+** 最初翻译的时候难免会有些生涩，读不通顺的章节直接提 issue 我，我重新翻译 **
+
+**（或者邮件我，如果你不清楚怎么发 issue 的话...<a href="mailto://2443051342@qq.com">mailto://2443051342@qq.com</a>） **
+
+
 本书为 Elastic 的官方书籍，原名为《Elasticsearch: The Definitive Guide》，翻译成中文即 《Elasticsearch: 权威指南》
 
 官方原文链接地址：
