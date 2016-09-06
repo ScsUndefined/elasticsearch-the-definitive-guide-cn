@@ -12,6 +12,8 @@
 
 接下来我们先简单介绍下 Lucene 计算相关性的过程，紧接着边演示边说明如何操控这个计算过程。
 
+***
+
 # Controlling Relevance
 
 Databases that deal purely in structured data (such as dates, numbers, and string enums) have it easy: they just have to check whether a document (or a row, in a relational database) matches the query.
