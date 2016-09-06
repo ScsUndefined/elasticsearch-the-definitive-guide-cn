@@ -1,3 +1,12 @@
+# 相关度算法背后的理论知识
+
+Lucene 包括 Elasticsearch 使用 “布尔模型” 来搜索相关的文档，然后使用“真实的计分函数”来计算相关度评分。而这个计分函数又引入了“TF/IDF”和“向量空间模型”的概念，并提供了一些更先进的功能，比如增加了一个协调因子，字段长度规整化功能以及词元或查询子句加权降权的功能。
+
+> Note
+> 
+> 小伙子，别方！这些概念听上去唬人，其实理解起来并不困难。虽然本章节介绍了算法，公式以及数学模型等形而上的东西，但其实它们
+***
+
 # Theory Behind Relevance Scoring
 
 Lucene (and thus Elasticsearch) uses the Boolean model to find matching documents, and a formula called the practical scoring function to calculate relevance. This formula borrows concepts from term frequency/inverse document frequency and the vector space model but adds more-modern features like a coordination factor, field length normalization, and term or query clause boosting.
