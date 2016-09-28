@@ -3,7 +3,7 @@
 * [Introduction 本书简介](README.md)
 * [1 Foreword 前言](s01/00_foreword.md)
 * [2 Preface 序](s02/00_preface.md)
-   * 2.1 Who Should Read This Book
+   * [2.1 Who Should Read This Book](s02/01_who_should_read_this_book.md)
    * 2.2 Why We Wrote This Book
    * 2.3 Elasticsearch Version
    * 2.4 How to Read This Book
