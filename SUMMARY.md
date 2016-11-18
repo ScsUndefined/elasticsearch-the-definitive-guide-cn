@@ -218,7 +218,7 @@
        * 5.7.4 Scoring Fuzziness
        * 5.7.5 Phonetic Matching
 * [6 Aggregations](s06/00_aggregations.md)
-   * High-Level Concepts
+   * [High-Level Concepts](s06/01_high-level_concepts.md)
    * Aggregation Test-Drive
    * Building Bar Charts
    * Looking at Time
