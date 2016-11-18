@@ -219,9 +219,9 @@
        * 5.7.5 Phonetic Matching
 * [6 Aggregations 聚合](s06/00_aggregations.md)
    * [6.1 High-Level Concepts 相关概念](s06/01_high-level_concepts.md)
-       * [Buckets 统计对象](s06/01_01_buckets.md)
-       * Metrics 统计规则
-       * [Combining the Two 总结](s06/01_02_combining_the_two.md)
+       * [6.1.1 Buckets 统计对象](s06/01_01_buckets.md)
+       * [6.1.2 Metrics 统计规则](s06/01_02_metrics.md)
+       * [6.1.3 Combining the Two 总结](s06/01_03_combining_the_two.md)
    * Aggregation Test-Drive
    * Building Bar Charts
    * Looking at Time
