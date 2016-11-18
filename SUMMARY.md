@@ -182,7 +182,7 @@
        * [5.2.3 Installing the ICU Plug-in 安装 ICU 插件](s05/02_03_installing_the_icu_plug-in.md)
        * [5.2.4 icu_tokenizer icu 分词器](s05/02_04_icu_tokenizer.md)
        * [5.2.5 Tidying Up Input Text 优化输入的文本](s05/02_05_tidying_up_input_text.md)
-   * [5.3 Normalizing Tokens 规范化标记](s05/03_normalizing_tokens.md)
+   * [5.3 Normalizing Tokens 规范化词元](s05/03_normalizing_tokens.md)
        * [5.3.1 In That Case](s05/03_01_in_that_case.md)
        * [5.3.2 You Have an Accent](s05/03_02_you_have_an_accent.md)
        * 5.3.3 Living in a Unicode World
@@ -217,8 +217,11 @@
        * 5.7.3 Fuzzy match Query
        * 5.7.4 Scoring Fuzziness
        * 5.7.5 Phonetic Matching
-* [6 Aggregations](s06/00_aggregations.md)
-   * [High-Level Concepts](s06/01_high-level_concepts.md)
+* [6 Aggregations 聚合](s06/00_aggregations.md)
+   * [6.1 High-Level Concepts 相关概念](s06/01_high-level_concepts.md)
+       * Buckets 统计对象
+       * Metrics 统计规则
+       * Combining the Two 总结
    * Aggregation Test-Drive
    * Building Bar Charts
    * Looking at Time
