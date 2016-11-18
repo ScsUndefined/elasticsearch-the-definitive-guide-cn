@@ -219,8 +219,8 @@
        * 5.7.5 Phonetic Matching
 * [6 Aggregations 聚合](s06/00_aggregations.md)
    * [6.1 High-Level Concepts 相关概念](s06/01_high-level_concepts.md)
-       * [Buckets 统计对象](s06/01_01_buckets.md)
-       * Metrics 统计规则
+       * Buckets 统计对象
+       * [Metrics 统计规则](s06/01_02_metrics.md)
        * Combining the Two 总结
    * Aggregation Test-Drive
    * Building Bar Charts
