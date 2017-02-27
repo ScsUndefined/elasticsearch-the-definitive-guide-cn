@@ -142,7 +142,7 @@
     * 4.4.5 Proximity for Relevance
     * 4.4.6 Improving Performance
     * 4.4.7 Finding Associated Words
-  * [4.5 Partial Matching](s04/4.5-partial-matching.md)
+  * [4.5 Partial Matching 部分匹配](s04/4.5-partial-matching.md)
     * 4.5.1 Postcodes and Structured Data
     * 4.5.2 prefix Query
     * 4.5.3 wildcard and regexp Queries
